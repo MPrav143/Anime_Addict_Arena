@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>music player</title>
+    
+    <link rel="stylesheet" type="text/css" href="One Piece Dialogue.css">
+</head>
+
+<body>
+
+  <div class="main">
+  	<p id="logo"><i class="fa fa-music"></i>Music</p>
+    
+        <!-- show_song_number -->
+        <div class="show_song_no">
+          <p id="present">1</p>
+          <p>/</p>
+          <p id="total">5</p>
+        </div>
+
+
+    <!--- left part --->
+     <div class="left">
+
+      <!--- song img --->
+      <img id="track_image">
+         <div class="volume">
+            <p id="volume_show">90</p>
+            <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+         </div>
+
+     </div>
+ 
+     <!--- right part --->
+  	 <div class="right">
+       <!--- song title & artist name --->
+       <div class="song_detail">
+           <p id="title">title.mp3</p>
+           <p id="artist">Artist name</p>
+       </div>
+
+      <!--- middle part --->
+  	 	<div class="middle">
+  	       <button onclick="previous_song()" id="pre">Previous</button>
+      	   <button onclick="justplay()" id="play">Play / Pause</button>
+  	       <button onclick="next_song()" id="next">Next</i></button>
+  	   </div>
+
+       <!--- song duration part --->
+        <div class="duration">
+           <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+           <button id="auto" onclick="autoplay_switch()">Auto &nbsp;<i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+        </div>
+           
+  	</div>
+
+
+  </div>
+   
+  <!--- Add javascript file --->
+  <script src="One Piece Dialogue.js"></script>
+
+</body>
+</html>
